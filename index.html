@@ -8,11 +8,18 @@
 <style>
 
     /* -------------------------------------
-       CUSTOM FONT (Title + Subtitle only)
+       CUSTOM FONTS
     --------------------------------------*/
     @font-face {
-        font-family: 'Enriqueta';
+        font-family: 'Enriqueta-Bold';
         src: url('Enriqueta-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Enriqueta-Regular';
+        src: url('Enriqueta-Regular.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
@@ -28,18 +35,17 @@
         overflow: hidden;
     }
 
-    /* Overlay opacity adjustable here */
+    /* Overlay for dim effect */
     .overlay {
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8);  /* change 0.45 if needed */
+        background: rgba(0, 0, 0, 0.8);
         position: absolute;
         top: 0;
         left: 0;
         z-index: 1;
     }
 
-    /* Content stays above overlay */
     .content {
         position: relative;
         z-index: 2;
@@ -52,68 +58,58 @@
     }
 
     /* -------------------------------------
-       TITLE (neon green)
+       TITLE
     --------------------------------------*/
     .title {
-        font-family: 'Enriqueta-Bold', sans-serif;
+        font-family: 'Enriqueta-Bold', serif;
         font-size: 65px;
-        color: #0FFCBD;                    /* Exact neon tone */
+        color: #0FFCBD;              /* Neon green */
         text-shadow: 0 0 25px #0FFCBD;
         margin: 0;
     }
 
     /* -------------------------------------
-       SUBTITLE (a bit lighter green)
+       SUBTITLE
     --------------------------------------*/
     .subtitle {
-        font-family: 'Enriqueta-Regular', sans-serif;
+        font-family: 'Enriqueta-Regular', serif;
         font-size: 27px;
-        color: #4CFC0F;                    /* lighter mint neon */
+        color: #4CFC0F;              /* Light neon green */
         text-shadow: 0 0 12px #4CFC0F;
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
     /* -------------------------------------
-       BUTTON (Sans-serif, clean, modern)
+       BUTTON
     --------------------------------------*/
     .btn {
         margin-top: 40px;
         padding: 15px 40px;
         font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif; /* clean font */
+        font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;
-        color: #98ffd9;                    /* button text color */
+        color: #98ffd9;
         border: 2px solid #98ffd9;
         border-radius: 40px;
         transition: 0.3s;
     }
 
     .btn:hover {
-        background: #0FFCBD;
+        background: #0FFCBD;         /* Hover color */
         color: black;
-        box-shadow: 0 0 20px #98ffd9, 0 0 40px #98ffd9;
+        box-shadow: 0 0 20px #0FFCBD, 0 0 40px #0FFCBD;
     }
 
 </style>
 </head>
 
 <body>
-    <!-- Dark overlay -->
     <div class="overlay"></div>
 
-    <!-- Centered text + button -->
     <div class="content">
-        <h1 class="title">SENSQ TECHNOLOGIES  </h1>
+        <h1 class="title">SENSQ TECHNOLOGIES</h1>
         <p class="subtitle">STAY TUNED FOR OUR SIGNAL</p>
         <a href="mailto:info.sensq@gmail.com" class="btn">Contact Now</a>
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
